@@ -21,7 +21,7 @@ export class Passenger {
                 } else {
                     ticket = (flight.ticketsList).find((ticket) => ticket.ownerName === null && (ticket instanceof VIPTicket))
                     if (ticket) {
-                        buyingTicket(this, ticket, ticket.price, true)
+                        buyingTicket(this, ticket, ticket.price, false)
                     }
                 } if (!ticket) return "No tickets left."
             } else return "There are no flights with this name."
